@@ -4,6 +4,9 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+/ProjectSettings/
+/_build/
+/_work/
 
 # Visual Studio 2015 cache directory
 /.vs/
