@@ -13,7 +13,7 @@ This will add a new panel with a Tree View where you add categories and can drag
 - Right-click to ping a Favourites item in the Hierarchy or Project panel.
 - Drag-and-drop items to new categories or other areas of Unity. You can for example drag-and-drop a Sprite from the Favourites panel into the property of a component's Inspector (if that property accept Sprites).
 
-#Technical Info#
+### Technical Info
 
 The favourites system's main asset file is saved next to the editor scripts, so that would be in `\Assets\Favourites\Editor` by default.
 
