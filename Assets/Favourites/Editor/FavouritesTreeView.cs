@@ -293,7 +293,11 @@ namespace FavouritesEd
 			if (Invoke_folderIconName == null)
 			{
 				Assembly asm = Assembly.GetAssembly(typeof(Editor));
+#if UNITY_2018_1_OR_NEWER
+				PropertyInfo prop = asm.GetType("UnityEditor.Experimental.EditorResources").GetProperty("folderIconName", (BindingFlags.Static | BindingFlags.Public));
+#else
 				PropertyInfo prop = asm.GetType("UnityEditorInternal.EditorResourcesUtility").GetProperty("folderIconName", (BindingFlags.Static | BindingFlags.Public));
+#endif
 				MethodInfo method = prop.GetGetMethod(true);
 				Invoke_folderIconName = (System.Func<string>)System.Delegate.CreateDelegate(typeof(System.Func<string>), method);
 			}
